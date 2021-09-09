@@ -16,6 +16,9 @@
 		"email": "spindles@spindles.dev"
 	},
   "bundleDependencies": true,
+  "dependencies": {
+    "sequelize": "^6.6.5"
+  },
 	"deprecated": false,
   "license": "GPL-3.0-or-later",
   "bugs": {

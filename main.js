@@ -12,28 +12,23 @@ const sequelizeLibrary = require("sequelize");
 
 let configSource					 	= null;
 let configDatabaseType			 		= null;
-let databaseLocation 					= null;
 let jsonDatabase 						= null;
 let sequelizeInstance 					= null;
 
 
 exports.init = function (config) {
 	const databaseType 					= config.databaseType;
-	const databaseOptions 				= null;
-
-	if (databaseType !== "sqlite" || databaseType !== "json") {
-		const databaseName 				= config.database.databaseName;
-		const databaseUsername 			= config.database.databaseUsername;
-		const databasePassword 			= config.database.databasePassword;
-		const databaseHost 				= config.database.databaseHost;
-		databaseOptions 				= {
-			databaseName: databaseName,
-			databaseHost: databaseHost,
-			databaseUsername: databaseUsername,
-			databasePassword: databasePassword,
-		};
-	
-	}
+	const databaseName 					= databaseOptions.databaseName;
+	const databaseUsername 				= databaseOptions.databaseUsername;
+	const databasePassword 				= databaseOptions.databasePassword;
+	const databaseHost 					= databaseOptions.databaseHost;
+	let databaseOptions 				= null;
+	databaseOptions 					= {
+		databaseName: databaseName,
+		databaseHost: databaseHost,
+		databaseUsername: databaseUsername,
+		databasePassword: databasePassword,
+	};
 
 	switch (configJSONDatabaseType) {
 		case json:
@@ -45,10 +40,6 @@ exports.init = function (config) {
 			break;
 
 		case mysql:
-		    const databaseName 			= databaseOptions.databaseName;
-		    const databaseUsername 		= databaseOptions.databaseUsername;
-		    const databasePassword 		= databaseOptions.databasePassword;
-		    const databaseHost 			= databaseOptions.databaseHost;
 			configDatabaseType 			= "mysql";
 			sequelizeInstance 			= new Sequelize(databaseName, databaseUsername, databasePassword, {
 				host: databaseHost,
@@ -58,10 +49,6 @@ exports.init = function (config) {
 			break;
 
 		case mariadb:
-		    const databaseName 			= databaseOptions.databaseName;
-		    const databaseUsername 		= databaseOptions.databaseUsername;
-		    const databasePassword 		= databaseOptions.databasePassword;
-		    const databaseHost 			= databaseOptions.databaseHost;
 			configDatabaseType 			= "mariadb";
 			sequelizeInstance 			= new Sequelize(databaseName, databaseUsername, databasePassword, {
 				host: databaseHost,
@@ -81,10 +68,6 @@ exports.init = function (config) {
 			break;
 
 		case postgres:
-		    const databaseName 			= databaseOptions.databaseName;
-		    const databaseUsername 		= databaseOptions.databaseUsername;
-		    const databasePassword 		= databaseOptions.databasePassword;
-		    const databaseHost 			= databaseOptions.databaseHost;
 			configDatabaseType 			= "postgres";
 			sequelizeInstance 			= new Sequelize(databaseName, databaseUsername, databasePassword, {
 				host: databaseHost,
@@ -94,10 +77,6 @@ exports.init = function (config) {
 			break;
 
 		case mssql:
-		    const databaseName 			= databaseOptions.databaseName;
-		    const databaseUsername 		= databaseOptions.databaseUsername;
-		    const databasePassword 		= databaseOptions.databasePassword;
-		    const databaseHost 			= databaseOptions.databaseHost;
 			configDatabaseType 			= "mssql";
 			sequelizeInstance 			= new Sequelize(databaseName, databaseUsername, databasePassword, {
 				host: databaseHost,

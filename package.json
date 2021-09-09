@@ -15,6 +15,8 @@
 		"url": "https://spindles.dev/",
 		"email": "spindles@spindles.dev"
 	},
+  "bundleDependencies": true,
+	"deprecated": false,
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/SpindlesDev/Spindles-Database-Interface/issues"

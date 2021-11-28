@@ -11,6 +11,7 @@ Spindles-Database-Interface.code-workspace
 
 # Cache data
 .dccache
+target/
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

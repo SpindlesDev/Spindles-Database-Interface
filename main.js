@@ -7,10 +7,7 @@
 * 	controlling database data.			*
 \****************************************/
 
-// Testing support
-const sequelizeLibrary =
-	require("../Spindles-Database-Test-Project/node_modules/sequelize") ||
-	require("sequelize");
+const sequelizeLibrary = require("sequelize");
 
 const fs = require("fs");
 
@@ -53,14 +50,14 @@ exports.init = function (config) {
 
 			break;
 
-		case "sqlite":
+		/*case "sqlite":
 			configDatabaseType = "sqlite";
 			sequelizeInstance = new Sequelize({
 				storage: databaseLocation,
 				dialect: "sqlite",
 			});
 
-			break;
+			break;*/
 
 		case "postgres":
 			configDatabaseType = "postgres";
@@ -112,8 +109,6 @@ exports.interface = function (dataInput) {
 	*        *
 	\********/
 	if (databaseType === "json") {
-		// WIP
-
 		if (databaseAction === "overwrite") {
 			let databaseData = [];
 

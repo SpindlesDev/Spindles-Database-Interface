@@ -3,23 +3,28 @@
   "version": "0.0.1",
   "description": "A database interface for SpindlesDev projects to easily controlling database data.",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpindlesDev/Spindles-Database-Interface.git"
   },
   "author": {
-		"name": "Spindles",
-		"url": "https://spindles.dev/",
-		"email": "spindles@spindles.dev"
-	},
+    "name": "Spindles",
+    "url": "https://spindles.dev/",
+    "email": "spindles@spindles.dev"
+  },
+  "scripts": {
+    "installModules": "npm install"
+  },
   "bundleDependencies": true,
   "dependencies": {
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "mysql2": "^2.3.3",
+    "mariadb": "^2.5.5",
+    "tedious": "^14.0.0"
   },
-	"deprecated": false,
+  "deprecated": false,
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/SpindlesDev/Spindles-Database-Interface/issues"

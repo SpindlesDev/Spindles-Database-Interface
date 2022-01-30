@@ -17,7 +17,7 @@
   },
   "bundleDependencies": true,
   "dependencies": {
-    "sequelize": "^6.6.5",
+    "sequelize": "^6.12.5",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "mysql2": "^2.3.3",

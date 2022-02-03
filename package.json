@@ -22,7 +22,7 @@
     "pg-hstore": "^2.3.4",
     "mysql2": "^2.3.3",
     "mariadb": "^2.5.5",
-    "tedious": "^14.0.0"
+    "tedious": "^14.3.0"
   },
   "deprecated": false,
   "license": "GPL-3.0-or-later",

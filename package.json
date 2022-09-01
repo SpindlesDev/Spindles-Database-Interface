@@ -17,6 +17,7 @@
   },
   "bundleDependencies": true,
   "dependencies": {
+
     "sequelize": "^6.21.2",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
